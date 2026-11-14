@@ -10,6 +10,8 @@ A full-stack hotel listing and management app (AuraStay):
 - **Images** — uploaded through the API with Multer and stored on the server's own
   disk (`server/uploads`), served back as static files.
 
+project demo video: https://drive.google.com/drive/folders/1_jwKrYJ8BzLs2Utry-Ncm-Prpr4PJmf_?usp=sharing
+
 ## What's implemented
 
 | Requirement | Where |
