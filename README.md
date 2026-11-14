@@ -69,8 +69,8 @@ cp .env.example .env               # then edit credentials if needed
 # 2 — server
 npm install
 npm run db:schema                  # creates the hotels table (safe to re-run)
-npm run db:seed                    # optional: 12 demo hotels with photos
-npm run dev                        # API on http://localhost:4000
+npm run db:seed                    # optional: 32 demo hotels in India (or npm run db:reseed)
+npm run dev                        # API on http://localhost:4002
 
 # 3 — client (new terminal)
 cd ../client
@@ -111,16 +111,16 @@ Quick smoke test with curl:
 
 ```bash
 # list with filter + paging
-curl "http://localhost:4000/api/hotels?search=beach&minPrice=50&maxPrice=300&limit=9&offset=0"
+curl "http://localhost:4002/api/hotels?search=beach&minPrice=2000&maxPrice=10000&limit=9&offset=0"
 
 # create
-curl -X POST http://localhost:4000/api/hotels \
+curl -X POST http://localhost:4002/api/hotels \
   -F image=@my-photo.jpg -F title="Test Stay" -F description="A decent test room." \
-  -F price=99.50 -F latitude=12.34 -F longitude=56.78
+  -F price=4500 -F latitude=12.34 -F longitude=56.78
 
 # update / delete
-curl -X PUT  http://localhost:4000/api/hotels/1 -F title="Renamed Stay" -F description="Updated description here." -F price=120 -F latitude=12.34 -F longitude=56.78
-curl -X DELETE http://localhost:4000/api/hotels/1
+curl -X PUT  http://localhost:4002/api/hotels/1 -F title="Renamed Stay" -F description="Updated description here." -F price=5200 -F latitude=12.34 -F longitude=56.78
+curl -X DELETE http://localhost:4002/api/hotels/1
 ```
 
 ## Design notes

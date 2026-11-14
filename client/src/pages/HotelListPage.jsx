@@ -122,28 +122,28 @@ export default function HotelListPage() {
           </label>
 
           <label className="filters__price">
-            <span>Min $</span>
+            <span>Min ₹</span>
             <input
               type="number"
               min="0"
-              step="0.01"
+              step="1"
               placeholder="0"
               value={filters.minPrice}
               onChange={(e) => dispatch(setFilter({ name: 'minPrice', value: e.target.value }))}
-              aria-label="Minimum price"
+              aria-label="Minimum price in INR"
             />
           </label>
 
           <label className="filters__price">
-            <span>Max $</span>
+            <span>Max ₹</span>
             <input
               type="number"
               min="0"
-              step="0.01"
+              step="1"
               placeholder="Any"
               value={filters.maxPrice}
               onChange={(e) => dispatch(setFilter({ name: 'maxPrice', value: e.target.value }))}
-              aria-label="Maximum price"
+              aria-label="Maximum price in INR"
             />
           </label>
 

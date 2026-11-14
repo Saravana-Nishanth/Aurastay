@@ -3,7 +3,12 @@
 
 export function formatPrice(price) {
   const value = Number(price);
-  return Number.isNaN(value) ? '—' : `$${value.toFixed(2)}`;
+  if (Number.isNaN(value)) return '—';
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: value % 1 === 0 ? 0 : 2,
+  }).format(value);
 }
 
 export function formatCoord(value) {

@@ -189,17 +189,17 @@ export default function HotelFormPage() {
           <div className="form-row">
             <div className="form-field">
               <label className="label" htmlFor="price">
-                Price per night ($) <span className="req">*</span>
+                Price per night (₹) <span className="req">*</span>
               </label>
               <input
                 id="price"
                 type="number"
                 min="0"
-                step="0.01"
+                step="1"
                 className={`input${errors.price ? ' input--invalid' : ''}`}
                 value={values.price}
                 onChange={setField('price')}
-                placeholder="99.50"
+                placeholder="4500"
               />
               {errors.price && <p className="field-error">{errors.price}</p>}
             </div>
